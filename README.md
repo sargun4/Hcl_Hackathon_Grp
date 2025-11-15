@@ -2,8 +2,8 @@
 ## Problem Statement Chosen: Building A Mini-RAG Powered Assistant <br>
 ![](Pipeline.jpg)
 Fig. 1: Data Load & Transform (LangChain) ->Embedding (Hugging Face Model via Langchain) ->Store (FAISS)->Retrieve (FAISS +LangChain)->Generate (Gemini) ->Serve (FastAPI)<br>
-##Plan Implemented<br>
-###Plan of Action <br>
+## Plan Implemented<br>
+### Plan of Action <br>
 1. Source, Load, and Transform using LangChain<br>
 We will gather raw documents, load them into LangChain, and clean/structure them for further processing.<br>
 2. Embedding using Hugging Face<br>
