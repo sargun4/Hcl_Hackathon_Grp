@@ -81,7 +81,7 @@ The system is practical, scalable, and can be extended into:<br>
 -domain-specific chatbots<br>
 Overall, this is a solid foundation for any real-world AI assistant.<br>
 
-The implementation details of running the frontend and backend on your system is given respective in their READMEs(README files are inside the frontend and backend folder).<br>
+The **implementation details** of running the **frontend and backend** on your system is given respective in their **READMEs**(README files are inside the frontend and backend folder).<br>
 
 Same Information Also Shared In The Below Doc:<br>
 https://docs.google.com/document/d/1mRPzlmNzZTav-5Y-umTrdVucLc3_evJ_WxQhlPboI7M/edit?tab=t.0
