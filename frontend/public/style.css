@@ -1,0 +1,208 @@
+/* filepath: /home/aza/HCL/public/style.css */
+:root {
+    --bg: #0f1113;
+    --panel: #161718;
+    --muted: #9aa0a6;
+    --accent: #e6e6e6;
+    --send-bg: #f1f5f9;
+    --file-accent: rgba(255,255,255,0.06);
+    --interactive-hover: rgba(255,255,255,0.02);
+}
+
+* { box-sizing: border-box; }
+
+html,body { height:100%; margin:0; font-family: Inter,Segoe UI,Arial; background:var(--bg); color:var(--accent); }
+
+.center { height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; padding:20px; }
+
+h1 { font-weight:500; color:var(--accent); margin:0 0 10px 0; }
+
+.input-row {
+    display:flex;
+    align-items:center;
+    background:var(--panel);
+    padding:14px 18px;
+    border-radius:999px;
+    gap:12px;
+    min-width:720px;
+    max-width:1200px;
+    width:80%;
+    box-shadow:0 8px 26px rgba(0,0,0,0.6);
+    transition:box-shadow .18s ease;
+}
+
+.input-row:focus-within { box-shadow:0 12px 36px rgba(0,0,0,0.7); }
+
+.prompt {
+    flex:1;
+    background:transparent;
+    border:0;
+    color:var(--accent);
+    font-size:16px;
+    outline:none;
+    padding:6px 4px;
+}
+
+.icon-btn { background:transparent; border:0; color:var(--muted); font-size:18px; cursor:pointer; padding:6px; border-radius:6px; }
+
+.send-btn {
+    width:46px;
+    height:46px;
+    display:inline-grid;
+    place-items:center;
+    background:var(--send-bg);
+    border-radius:50%;
+    border:0;
+    cursor:pointer;
+    box-shadow:0 6px 14px rgba(0,0,0,0.25);
+    padding:0;
+    transition:transform .12s ease, box-shadow .12s ease;
+}
+.send-btn:hover { transform:translateY(-3px); box-shadow:0 10px 22px rgba(0,0,0,0.32); }
+
+.file-btn {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:44px;
+    height:44px;
+    border-radius:10px;
+    background:transparent;
+    border:2px dashed var(--file-accent);
+    color:var(--muted);
+    cursor:pointer;
+    transition:background .12s ease, border-color .12s ease;
+}
+.file-btn:hover { background:var(--interactive-hover); border-color:rgba(255,255,255,0.12); }
+
+.file-btn input { display:none; }
+
+.file-icon { color:var(--muted); opacity:0.98; }
+
+.file-list {
+    color:var(--muted);
+    font-size:13px;
+    max-width:1200px;
+    width:80%;
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    padding-left:12px;
+}
+
+.file-chip {
+    background:#222;
+    border-radius:999px;
+    padding:8px 12px;
+    color:var(--muted);
+    font-size:13px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+}
+
+.response {
+    white-space:pre-wrap;
+    max-width:1200px;
+    width:80%;
+    color:#e6e6e6;
+    opacity:0.95;
+    background:transparent;
+    border:0;
+    margin-top:8px;
+    padding:10px 0;
+}
+
+.sources {
+  max-width:1200px;
+  width:80%;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  font-size:12px;
+  color:var(--muted);
+  padding-left:12px;
+}
+.source-item {
+  background:#1e1f20;
+  padding:6px 10px;
+  border-radius:6px;
+  line-height:1.3;
+  border:1px solid rgba(255,255,255,0.05);
+}
+
+.result-card {
+  max-width:1200px;
+  width:80%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:14px;
+  padding:20px;
+  margin-top:18px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+  transition:transform .12s ease, opacity .12s ease;
+  color:var(--accent);
+}
+
+.result-header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:12px;
+}
+
+.result-title { font-weight:600; color:var(--accent); font-size:14px; }
+
+.result-actions { display:flex; gap:8px; align-items:center; }
+
+.result-body {
+  color:#e6e6e6;
+  font-size:15px;
+  line-height:1.6;
+  white-space:pre-wrap;
+  word-break:break-word;
+  padding:6px 8px;              /* give space so scrollbar doesn't overlap text */
+  margin-bottom:12px;
+  max-height:46vh;
+  overflow:auto;
+
+  /* smooth scrolling feel */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* WebKit browsers (Chrome, Edge, Safari) */
+.result-body::-webkit-scrollbar {
+  width:10px;
+  height:10px;
+}
+.result-body::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.015);
+  border-radius:999px;
+  margin:6px 0;
+}
+.result-body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border-radius:999px;
+  border: 2px solid rgba(0,0,0,0.0); /* padding effect */
+  min-height:24px;
+}
+.result-body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06));
+}
+
+/* Firefox */
+.result-body {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.06) rgba(255,255,255,0.015);
+}
+
+/* Small screens: reduce thumb width so it doesn't take too much space */
+@media (max-width:600px) {
+  .result-body::-webkit-scrollbar { width:8px; }
+}
+
+@media(max-width:880px) {
+    .input-row { min-width:calc(100% - 40px); width:calc(100% - 40px); }
+    .response, .file-list { width:calc(100% - 40px); }
+}
