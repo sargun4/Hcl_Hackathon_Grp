@@ -1,4 +1,5 @@
-# Hcl_Hackathon_Grp
+# Hcl_Hackathon_Grp(AI/Python: Group 3)
+## Name of Students: Asa Singh(2022113), Abhinav Kumar Saxena(2022018), Sargun Singh Khurana(2022450), Vaibhav Yadav(2022557)
 ## Problem Statement Chosen: Building A Mini-RAG Powered Assistant <br>
 ![](Pipeline.jpg)
 Fig. 1: Data Load & Transform (LangChain) ->Embedding (Hugging Face Model via Langchain) ->Store (FAISS)->Retrieve (FAISS +LangChain)->Generate (Gemini) ->Serve (FastAPI)<br>
